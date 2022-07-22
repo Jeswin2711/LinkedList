@@ -12,6 +12,7 @@ public class LinkedListMain
         operations.addData(56);
         operations.addData(30);
         operations.addData(70);
+
     }
 }
 
