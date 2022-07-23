@@ -17,7 +17,7 @@ class LinkedListOperations
         {
             head = newNode;
             tail = newNode;
-            System.out.println("Data Added Successfully");
+            System.out.println("\nData Added Successfully");
         }
         else {
             newNode.setNodeNext(head);
@@ -32,7 +32,7 @@ class LinkedListOperations
     public void showValues() {
         LinkedListNode temp = head;
         if (head == null) {
-            System.out.println("List is empty");
+            System.out.println("List is empty \n ");
         }else {
             while (temp != null) {
                 System.out.print(temp.getNodeData() + " -> ");
