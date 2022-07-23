@@ -19,11 +19,25 @@ class LinkedListOperations
             tail = newNode;
             System.out.println("Data Added Successfully");
         }
-        else
-        {
+        else {
             newNode.setNodeNext(head);
             head = newNode;
             System.out.println("Data Added Successfully");
+        }
+    }
+
+    /*
+    Show Data funtion to show the linked list Node Values one by one
+     */
+    public void showValues() {
+        LinkedListNode temp = head;
+        if (head == null) {
+            System.out.println("List is empty");
+        }else {
+            while (temp != null) {
+                System.out.print(temp.getNodeData() + " -> ");
+                temp = temp.getNodeNext();
+            }
         }
     }
 }
