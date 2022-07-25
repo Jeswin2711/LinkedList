@@ -66,6 +66,24 @@ class LinkedListOperations
         return value;
     }
 
+    /*
+_Pop Method to Pop the last element of a Linked List_
+*/
+    public Object popLast() {
+        Object value = null;
+        LinkedListNode temp = head;
+        while (head.getNodeNext() != null)
+        {
+            if(temp.getNodeNext() == null)
+            {
+                value =  temp.getNodeData();
+                break;
+            }
+            temp = temp.getNodeNext();
+        }
+        return value;
+    }
+
 }
 
 

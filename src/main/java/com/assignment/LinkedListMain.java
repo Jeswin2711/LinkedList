@@ -66,7 +66,16 @@ public class LinkedListMain
         popFirstData.pop();
         popFirstData.showValues();
 
-
+        /*_
+_  A new List for Popping Last Element_
+_ */
+        LinkedListOperations popLastData = new LinkedListOperations();
+        popLastData.addData(70);
+        popLastData.addData(30);
+        popLastData.addData(56);
+        System.out.println("\nBefore Popping Last ");
+        popLastData.showValues();
+        System.out.println("\nPopped Element " + popLastData.popLast());
 
     }
 }
