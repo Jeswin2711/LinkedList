@@ -108,6 +108,31 @@ _Pop Method to Pop the last element of a Linked List_
         return value;
     }
 
+    /*
+    Inserting data after using the index Value
+     */
+
+    public void insertAfter(Object indexVal , Object num)
+    {
+        LinkedListNode newNode = new LinkedListNode(num);
+        LinkedListNode temp = head;
+        LinkedListNode temp1 = head;
+        Object index = indexVal;
+        Object value = 0 ;
+        for(int i = 0 ; i <= (int)index ; i++)
+        {
+            value = temp.getNodeData();
+            temp = temp.getNodeNext();
+        }
+        while (temp1 != null) {
+            if (temp1.getNodeData().equals(value)) {
+                newNode.setNodeNext(temp1.getNodeNext());
+                temp1.setNodeNext(newNode);
+                break;
+            }
+            temp1 = temp1.getNodeNext();
+        }
+    }
 }
 
 
