@@ -35,9 +35,24 @@ class LinkedListOperations
             System.out.println("List is empty \n ");
         }else {
             while (temp != null) {
-                System.out.print(temp.getNodeData() + " -> ");
+                System.out.print(temp.getNodeData() + " ");
                 temp = temp.getNodeNext();
             }
+        }
+    }
+    /*
+    Function to insert data after a particular position
+     */
+    public void insertData(Object preData, Object newData) {
+        LinkedListNode newNode = new LinkedListNode(newData);
+        LinkedListNode temp = head;
+        while (temp != null) {
+            if (temp.getNodeData().equals(preData)) {
+                newNode.setNodeNext(temp.getNodeNext());
+                temp.setNodeNext(newNode);
+                break;
+            }
+            temp = temp.getNodeNext();
         }
     }
 }

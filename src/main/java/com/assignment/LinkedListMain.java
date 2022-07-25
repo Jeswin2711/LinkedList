@@ -41,6 +41,19 @@ public class LinkedListMain
         operations2.addData(70);
         operations2.showValues();
 
+        /*
+        Insert a Element After a Value
+         */
+        LinkedListOperations insertingData = new LinkedListOperations();
+        insertingData.addData(70);
+        insertingData.addData(56);
+        System.out.println("Before Insertion");
+        insertingData.showValues();
+        System.out.println("\nAfter Insertion");
+        insertingData.insertData(56,30);
+        insertingData.showValues();
+
+
     }
 }
 
