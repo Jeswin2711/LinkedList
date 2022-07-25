@@ -5,7 +5,8 @@ class LinkedListOperations
     /*
     Class Variable head and tail because a LinkedList consist of Head and Tail
      */
-    LinkedListNode head,tail;
+    LinkedListNode head;
+    LinkedListNode tail;
 
     /*
     function to Add Data to a LinkedList;
@@ -55,6 +56,16 @@ class LinkedListOperations
             temp = temp.getNodeNext();
         }
     }
+
+    /*
+    Pop method to pop the first Element of a Linked List
+     */
+    public Object pop() {
+        Object value = head.getNodeData();
+        head = head.getNodeNext();
+        return value;
+    }
+
 }
 
 

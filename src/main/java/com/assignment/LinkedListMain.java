@@ -53,6 +53,20 @@ public class LinkedListMain
         insertingData.insertData(56,30);
         insertingData.showValues();
 
+        /*
+        Popping First Element of a Linked List
+         */
+        LinkedListOperations popFirstData = new LinkedListOperations();
+        popFirstData.addData(70);
+        popFirstData.addData(30);
+        popFirstData.addData(56);
+        System.out.println("Before Popping");
+        popFirstData.showValues();
+        System.out.println("\nAfter Popping");
+        popFirstData.pop();
+        popFirstData.showValues();
+
+
 
     }
 }
