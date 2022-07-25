@@ -133,6 +133,31 @@ _Pop Method to Pop the last element of a Linked List_
             temp1 = temp1.getNodeNext();
         }
     }
+
+    /*
+    Function to remove a data from the Linked List
+     */
+    public void removeData(Object data) {
+        LinkedListNode temp = head;
+        if (head.getNodeData().equals(data)) {
+            head = head.getNodeNext();
+        }
+        else {
+            while (temp.getNodeData() != data) {
+                if ((temp.getNodeNext().getNodeData()).equals(data)) {
+                    if (temp.getNodeNext().equals(tail)) {
+                        temp.setNodeNext(null);
+                        tail = temp;
+                        break;
+                    }
+                    temp.setNodeNext(temp.getNodeNext().getNodeNext());
+                    break;
+                }
+                temp = temp.getNodeNext();
+            }
+        }
+
+    }
 }
 
 

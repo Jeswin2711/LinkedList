@@ -95,6 +95,23 @@ public class LinkedListMain
         Object index = insertData.search(70);
         insertData.insertAfter(index,40);
         insertData.showValues();
+
+
+        /*
+        LinkedList to Delete a Particular Value from a Linked List
+         */
+
+        LinkedListOperations deleteData = new LinkedListOperations();
+        deleteData.addData(70);
+        deleteData.addData(40);
+        deleteData.addData(30);
+        deleteData.addData(56);
+        deleteData.addData(40);
+        System.out.println("\npBefore Deleting");
+        insertData.showValues();
+        insertData.removeData(40);
+        System.out.println("\nAfter Deleting");
+        insertData.showValues();
     }
 }
 
