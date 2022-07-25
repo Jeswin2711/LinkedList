@@ -66,9 +66,7 @@ public class LinkedListMain
         popFirstData.pop();
         popFirstData.showValues();
 
-        /*_
-_  A new List for Popping Last Element_
-_ */
+        /*_  A new List for Popping Last Element_ */
         LinkedListOperations popLastData = new LinkedListOperations();
         popLastData.addData(70);
         popLastData.addData(30);
@@ -77,6 +75,16 @@ _ */
         popLastData.showValues();
         System.out.println("\nPopped Element " + popLastData.popLast());
 
+        /*
+        Linked List searchData object to find index of the Node with given value
+         */
+
+        LinkedListOperations searchData = new LinkedListOperations();
+        searchData.addData(70);
+        searchData.addData(30);
+        searchData.addData(56);
+        searchData.showValues();
+        System.out.println("\nThe Index of The Given Value is " + searchData.search(30));
     }
 }
 

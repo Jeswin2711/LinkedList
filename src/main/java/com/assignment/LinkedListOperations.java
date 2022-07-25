@@ -84,6 +84,30 @@ _Pop Method to Pop the last element of a Linked List_
         return value;
     }
 
+    /*
+    Search Function to return the Index of the Element LinkedList
+     */
+    public Object search(Object num)
+    {
+        Object value = 0;
+        int index = 0;
+        LinkedListNode temp = head;
+        while (true)
+        {
+            if (temp.getNodeData() == num)
+            {
+                 value = index;
+                 break;
+            }
+            else
+            {
+                temp = temp.getNodeNext();
+                index++;
+            }
+        }
+        return value;
+    }
+
 }
 
 
