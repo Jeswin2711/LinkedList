@@ -78,13 +78,23 @@ public class LinkedListMain
         /*
         Linked List searchData object to find index of the Node with given value
          */
-
         LinkedListOperations searchData = new LinkedListOperations();
         searchData.addData(70);
         searchData.addData(30);
         searchData.addData(56);
         searchData.showValues();
         System.out.println("\nThe Index of The Given Value is " + searchData.search(30));
+
+        /*
+        Inserting Data 40 after 30 to the Linked List
+         */
+        LinkedListOperations insertData = new LinkedListOperations();
+        insertData.addData(70);
+        insertData.addData(30);
+        insertData.addData(56);
+        Object index = insertData.search(70);
+        insertData.insertAfter(index,40);
+        insertData.showValues();
     }
 }
 
