@@ -1,5 +1,8 @@
 package com.assignment;
 
+/*
+POJO CLASS
+ */
 class LinkedListNode
 {
     private Object nodeData;
