@@ -107,11 +107,28 @@ public class LinkedListMain
         deleteData.addData(30);
         deleteData.addData(56);
         deleteData.addData(40);
-        System.out.println("\npBefore Deleting");
+        System.out.println("\nBefore Deleting");
         insertData.showValues();
         insertData.removeData(40);
         System.out.println("\nAfter Deleting");
         insertData.showValues();
+
+        /*
+        Creating new Linked List and Sorting it
+         */
+        SortLinkedList sortingList = new SortLinkedList();
+        LinkedListNode head = new LinkedListNode(56);
+        LinkedListNode temp = head;
+        temp.setNodeNext(new LinkedListNode(30));
+        temp = temp.getNodeNext();
+        temp.setNodeNext(new LinkedListNode(40));
+        temp = temp.getNodeNext();
+        temp.setNodeNext(new LinkedListNode(70));
+        head = sortingList.mergeSort(head);
+        System.out.print("\nSorted Linked List is: \n");
+        sortingList.printLinkedList(head);
+
+
     }
 }
 

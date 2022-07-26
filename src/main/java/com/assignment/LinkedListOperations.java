@@ -156,7 +156,65 @@ _Pop Method to Pop the last element of a Linked List_
                 temp = temp.getNodeNext();
             }
         }
+    }
 
+    /*
+    Function to Sort the List
+     */
+
+    public LinkedListNode sortList(LinkedListNode head)
+    {
+        if(head == null || head.getNodeNext() == null)
+        {
+            return head;
+        }
+
+        LinkedListNode temp = head;
+        LinkedListNode firstHalf = head;
+        LinkedListNode secondHalf = head;
+
+        while (secondHalf != null && secondHalf.getNodeNext() != null)
+        {
+            temp = firstHalf;
+            firstHalf = firstHalf.getNodeNext();
+            secondHalf = secondHalf.getNodeNext().getNodeNext();
+        }
+        temp = null;
+        LinkedListNode left_side = sortList(firstHalf);
+        LinkedListNode right_side = sortList(secondHalf);
+        return mergeSort(left_side,right_side);
+    }
+
+    public LinkedListNode mergeSort(LinkedListNode list1 , LinkedListNode list2)
+    {
+        LinkedListNode sorted_temp = new LinkedListNode(0);
+        LinkedListNode current_node = sorted_temp;
+
+        while (list1 != null && list2 != null)
+        {
+            if((int)list1.getNodeData() < (int)list2.getNodeData())
+            {
+                current_node.setNodeNext(list1);
+                list1 = list1.getNodeNext();
+            }
+            else
+            {
+                current_node.setNodeNext(list2);
+                list2 = list2.getNodeNext();
+            }
+            current_node = current_node.getNodeNext();
+        }
+        if(list1 != null)
+        {
+            current_node.setNodeNext(list1);
+            list1 = list1.getNodeNext();
+        }
+        if(list2 != null)
+        {
+            current_node.setNodeNext(list2);
+            list2 = list2.getNodeNext();
+        }
+        return sorted_temp.getNodeNext();
     }
 }
 
